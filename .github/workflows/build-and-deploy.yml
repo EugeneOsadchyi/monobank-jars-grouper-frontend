@@ -55,8 +55,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script_stop: true
           script: |
-            DOCKER_PULL_IMAGE=$(echo "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest" | tr '[:upper:]' '[:lower:]')
-
-            cd ~/raketa
-            docker pull $DOCKER_PULL_IMAGE
+            cd ~/monobank-jars-grouper
             docker-compose up -d
