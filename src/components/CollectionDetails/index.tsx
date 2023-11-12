@@ -1,4 +1,5 @@
 import { Progress } from 'rsuite';
+import './index.css';
 
 interface CollectionDetailsProps {
   responsible: string;
@@ -14,9 +15,9 @@ const CollectionDetails: React.FC<CollectionDetailsProps> = ({
   actualAmount
 }) => {
   return (
-    <header style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center'}}>
+    <header className="CollectionDetails">
       <div>
-
+        <img src="https://ava-img.monobank.com.ua/NqJAEHONJZ4lEaerJztWuzcpw-3pLVOHQ1hMmQIQlR4=.jpg" width="100" />
       </div>
       <div>
         <dl>

@@ -43,14 +43,9 @@ const LinkCell = ({ rowData, dataKey, ...props }: CellProps) => {
   );
 };
 
-const ParticipantsTable: React.FC<{ participants: Participant[] }> = ({ participants }) => (
-  <Table height={300} data={participants} className="participants-table" autoHeight={true}>
-    <Column width={70} align="center" fixed>
-      <HeaderCell>Id</HeaderCell>
-      <Cell dataKey="id" />
-    </Column>
-
-    <Column width={80} align="center">
+const ParticipantsTable: React.FC<{ participants: Participant[], loading: boolean }> = ({ participants, loading }) => (
+  <Table height={300} data={participants} className="participants-table" autoHeight={true} loading={loading}>
+    <Column width={80} align="center" fixed>
       <HeaderCell>Аватар</HeaderCell>
       <ImageCell dataKey="avatar" />
     </Column>
@@ -74,6 +69,7 @@ const ParticipantsTable: React.FC<{ participants: Participant[] }> = ({ particip
             <div>
               <Progress.Line style={{ padding: 0 }}
                 percent={+percent.toFixed(2)}
+                status={(rowData as Participant).jarStatus === "CLOSED" ? 'success' : 'active'}
               />
             </div>
           );
@@ -91,7 +87,7 @@ const ParticipantsTable: React.FC<{ participants: Participant[] }> = ({ particip
       <MoneyCell dataKey="jarGoal" />
     </Column>
 
-    <Column width={200}>
+    <Column width={140} align='center'>
       <HeaderCell>Посилання на банку</HeaderCell>
       <LinkCell dataKey="jarLink" />
     </Column>

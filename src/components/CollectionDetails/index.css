@@ -1,0 +1,11 @@
+.CollectionDetails {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .CollectionDetails {
+    gap: 20px;
+  }
+}
