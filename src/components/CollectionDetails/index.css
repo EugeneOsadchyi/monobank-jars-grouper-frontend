@@ -1,7 +1,8 @@
 .CollectionDetails {
   display: flex;
   align-items: center;
-  gap: 40px;
+  justify-content: center;
+  gap: 100px;
 }
 
 @media screen and (max-width: 768px) {

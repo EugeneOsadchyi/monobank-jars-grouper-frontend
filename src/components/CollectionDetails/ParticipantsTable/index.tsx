@@ -50,17 +50,17 @@ const ParticipantsTable: React.FC<{ participants: Participant[], loading: boolea
       <ImageCell dataKey="avatar" />
     </Column>
 
-    <Column width={200}>
+    <Column flexGrow={1} minWidth={200}>
       <HeaderCell>Імʼя</HeaderCell>
       <Cell dataKey="ownerFullName" />
     </Column>
 
-    <Column width={160}>
+    <Column flexGrow={1} minWidth={160}>
       <HeaderCell>Збирає</HeaderCell>
       <Cell dataKey="ownerName" />
     </Column>
 
-    <Column width={230}>
+    <Column flexGrow={1} minWidth={250}>
       <HeaderCell>Прогрес</HeaderCell>
       <Cell>
         {rowData => {
@@ -77,17 +77,17 @@ const ParticipantsTable: React.FC<{ participants: Participant[], loading: boolea
       </Cell>
     </Column>
 
-    <Column width={100}>
+    <Column flexGrow={1} minWidth={100}>
       <HeaderCell>Зібрали</HeaderCell>
       <MoneyCell dataKey="jarAmount" />
     </Column>
 
-    <Column width={100}>
+    <Column flexGrow={1} minWidth={100}>
       <HeaderCell>Ціль</HeaderCell>
       <MoneyCell dataKey="jarGoal" />
     </Column>
 
-    <Column width={140} align='center'>
+    <Column flexGrow={1} fullText={true} minWidth={140} align='center'>
       <HeaderCell>Посилання на банку</HeaderCell>
       <LinkCell dataKey="jarLink" />
     </Column>

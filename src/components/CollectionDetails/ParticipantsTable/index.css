@@ -1,3 +1,7 @@
+.participants-table {
+  margin: 0 40px;
+}
+
 .participants-table .rs-progress-line .rs-progress-info {
   flex: 0 0 70px;
   width: 70px;
@@ -5,4 +9,10 @@
 
 .participants-table a svg {
   fill: var(--rs-text-link);
+}
+
+@media screen and (max-width: 768px) {
+  .participants-table {
+    margin: 0;
+  }
 }
